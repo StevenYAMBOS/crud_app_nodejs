@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application CRUD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">Système de gestion d'utilisateur</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex-justify-between">
+                <div class="filter">
+                    <a href="/" ><i class="fas fa-angle-double-left"></i></a>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-darker">Nouvel utilisateur</h2>
+                <span class="text-light">Ce formulaire permet de créer un nouvel utilisateur</span>
+            </div>
+
+            <form id="update_user" method="POST">
+                <div class="new_user">
+                    <div class="form-group">
+                        <label for="name" class="text-light">Nom</label>
+                        <input type="hidden" name="id" value="">
+                        <input type="text" name="name" value="" placeholder="Steven YAMBOS">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Email" class="text-light">Email</label>
+                        <input type="text" name="email" value="stevenyambos@gmail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender" class="text-light">Sexe</label>
+                        <div class="radio inline">
+                            <input type="radio" name="gender" value="Male">
+                            <label for="gender" class="text-light">Homme</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" name="gender" value="Female">
+                            <label for="gender" class="text-light">Female</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender" class="text-light">Status</label>
+                        <div class="radio inline">
+                            <input type="radio" name="gender" value="Actif">
+                            <label for="gender" class="text-light">Actif</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" name="gender" value="Inactif">
+                            <label for="gender" class="text-light">Inactif</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Enregistrer</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
