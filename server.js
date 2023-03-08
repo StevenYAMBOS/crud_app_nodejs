@@ -20,15 +20,8 @@ app.use('/css', express.static(path.resolve(__dirname, 'assets/css')));
 app.use('/img', express.static(path.resolve(__dirname, 'assets/img')));
 app.use('/js', express.static(path.resolve(__dirname, 'assets/js')));
 
-app.get('/', (req, res) => {
-    // Rendre un fichier HTML
-    res.render('index.ejs');
-});
-
-app.get('/add-user', (req, res) => {
-    // Rendre un fichier HTML
-    res.render('add_user');
-});
+// Charger les routeurs
+app.use("/", require('./server/routes/router'))
 
 app.listen(3000, () => {
     console.log(`Le serveur fonctionne sur http://localhost:${PORT}`)
